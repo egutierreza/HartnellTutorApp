@@ -1,0 +1,645 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			body{
+				background-color: #008080;
+			}
+
+	                        .card{
+	                          -webkit-box-shadow: 0 8px 6px -6px black;
+	                          -moz-box-shadow: 0 8px 6px -6px black;
+	                          box-shadow: 0 8px 6px -6px black;
+	                        }
+	                        .card .card-header{
+	                        	background-color: #004444;
+	                        	color: white;
+	                        }
+			
+			.mainContent{
+
+				margin-left: 0vw;
+				background-color: #008080;
+				width: 100%;
+			}
+	                        .navbar-brand img{
+	                          max-height: 100%;
+	                          max-width: 100%;
+	                        }
+	                        
+	                        .logo{
+	                                  width: 150px;
+	                                  height: 30px;
+	                          }
+
+		</style>
+		<style>
+			.featuredSessions{
+				height: 50%;
+				width: 100%;
+				margin-bottom: 1vw;
+				margin-top: 1vw;
+				background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Library-Background-HD.jpg");
+				background-position: right center;
+			}
+			.activeSessions{
+				width: 20%;
+				margin: 0 auto;
+				border: #004444;
+				height: 40%;
+				
+			}
+			.sessions{
+				width: 53%;
+				margin: 0 auto;
+				border: #004444;
+
+			}
+			.sessionsFilter{
+				width: 23%;
+				margin: 0 auto;
+				border: #004444;
+				background-color: #f2f2f2;
+				height: 50%;
+			}
+			.filter{
+				margin-bottom: 1vw;
+			}
+			.sessionCard{
+				border-radius: 2%;
+				overflow: hidden;
+				box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+				margin-bottom: .5vw;
+			}
+			.sessionCard .more{
+				font-size: .8vw;
+				position: absolute;
+				left: 3.2vw;
+				bottom: .5vw;
+			}
+			.sessionCreator{
+				max-width: 70%;
+				max-height: 70%;
+				border-radius: 50%;
+				display: block;
+				margin: 0 auto;
+				margin-top: .3vw;
+			}
+			.sessionSchool{
+				font-size: .8vw;
+				font-style: italic;
+				color: gray;
+				margin-left: 1vw;
+				float: left;
+				margin-top: .5vw;
+			}
+			.sessionLocation{
+				font-size: .8vw;
+				font-style: italic;
+				color: gray;
+				float: right; 
+				margin-right: 9vw;
+				margin-top: .5vw;
+			}
+			.dateTime{
+				margin-left: 1vw;
+				font-size: 1.5vw;
+			}
+			.card-footer .btn{
+				margin: .2vw;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-toggleable-md navbar-inverse sticky-top" style="background-color: #004444;  color: white;">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    		<span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<a class="navbar-brand" href="dashboard.html">
+	                                        <img src="Logomakr_4kprxh.png" class="logo">
+	                                </a>
+
+		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	                                                <form class="form-inline my-2 my-lg-0">
+	                                                  <input class="form-control mr-sm-2" style="width: 500px;" type="text" placeholder="Search">
+	                                                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+	                                                </form>
+		    		<ul class="navbar-nav" style="margin-left:auto">
+		      			<li class="nav-item float-right" >
+		        				<a class="nav-link" href="#"> Sessions <span class="fa fa-calendar"></span></a>
+		      			</li>
+				      	<li class="nav-item float-right">
+				        		<a class="nav-link" href="#">Tutors <span class="fa fa-graduation-cap"></span></a>
+				      	</li>
+				      	<li class="nav-item float-right">
+				        		<a class="nav-link " href="#">Classes <span class="fa fa-university" aria-hidden="true"></span></a>
+				      	</li>
+				      	<li class="nav-item float-right">
+				      		<a class="nav-link" href="#">Resources <span class="fa fa-archive" aria-hidden="true"></span></a>
+				      	</li>
+		    		</ul>	
+		  	</div> 
+		</nav>
+		<div class="container-fluid" style="margin-bottom: 1vw;">
+			<div class="featuredSessions card">
+				
+			</div>
+			<div class="row" style="margin: 0 auto;">
+				<div class="card activeSessions">
+					<div class="card-header">
+						Your Sessions
+					</div>
+					<div class="card-block">
+
+					</div>
+				</div>
+				<div class="card sessions">
+					<div class="card-header">Sessions</div>
+					<div class="card-block">
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="sessionCard">
+							<div class="container"> 
+								<div class="row">
+									<div style="width: 17%; background-color: #f2f2f2; text-align: center; ">
+										<span style="font-size: 1vw; " align="center">Tom Myspace</span>
+										<div style="height: 7%;">
+											<img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="sessionCreator">
+										</div>
+									</div>
+									<div  style="width: 53%;">
+										<span class="sessionSchool" >Hartnell College</span>
+										<span class="sessionLocation">Library, Room #312</span><br>
+										<span class="dateTime">Tuesday, Jan 4th; 11:00 - 1:00 PM </span>
+
+									</div>
+									<div style="width: 10%; font-size: .9vw; margin-top: .5vw; text-align: center;">
+										<span class="sessionClass">ENG 1A</span>
+										<span class="sessionID">#1802</span>
+										<span class="sessionSubject">English</span>
+
+									</div>
+									<div style="width: 20%; text-align: center; margin-top: 1.5vw; margin-bottom: 1vw;">
+										<button type="button" class="btn btn-outline-success btn-sm">Join</button>
+										<button type="button" class="btn btn-outline-primary btn-sm">More</button>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer">
+						<div class="row">
+							<div class="col-md-5">
+								<div class="row" >
+									<button type="button" style="margin-left: 1vw;" class="btn btn-info btn-sm">2</button>
+									<button type="button" class="btn btn-info btn-sm">3</button>
+									<button type="button" class="btn btn-info btn-sm">3</button>
+									<span>. . . </span>
+									<button type="button" class="btn btn-info btn-sm">17</button>
+									<button type="button" class="btn btn-info btn-sm">18</button>
+									<button type="button" class="btn btn-info btn-sm">19</button>
+								</div>
+							</div>
+							<div class="col-md-2" align="center">
+								Page 1
+							</div>
+							<div class="col-md-5">
+								<div class="row" style="float: right;" >
+									<button type="button" class="btn btn-primary btn-sm">First</button>
+									<button type="button" class="btn btn-primary btn-sm">Prev</button>
+									<button type="button" class="btn btn-primary btn-sm">Next</button>
+									<button type="button" style="margin-right: 1vw;" class="btn btn-primary btn-sm">Last</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card sessionsFilter ">
+					<div class="card-header">Filter</div>
+					<div class="card-block">
+						<div id="schoolFilter" class="filter"><span class="fa fa-institution"> Hartnell College</span></div>
+						<div id="classFilter" class="filter"><span class="fa fa-pencil"> Differential Equations</span></div>
+						<div id="dateFilter" class="filter"><span class="fa fa-calendar"> Tuesday, October 18</span></div>
+						<div id="timeFilter" class="filter"><span class="fa fa-clock-o"> 10:00 AM - 12:00 PM</span></div>
+						<div id="subjectFilter" class="filter"><span class="fa fa-book"> Mathematics</span></div>
+						<div id="idFilter" class="filter"><span class="fa fa-hashtag"> None</span></div>
+						<div id="creatorFilter" class="filter"><span class="fa fa-user"> .None</span></div>
+						<div id="membersFilter" class="filter"><span class="fa fa-group"> None</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,375 @@
+			
+				* {
+				    margin: 0;
+				    padding: 0;
+				}
+				html {
+				    overflow: scroll;
+				    overflow-x: hidden;
+				}
+				::-webkit-scrollbar {
+				    width: 0px;  /* remove scrollbar space */
+				    background: transparent;  /* optional: just make scrollbar invisible */
+				}
+				/* optional: show position indicator in red */
+				::-webkit-scrollbar-thumb {
+				    background: #FF0000;
+				}
+				.addButton{
+					background-color: #1B86D1;
+					color: white;
+					height: 8%;
+					width: 5%;
+					position: fixed;
+					z-index: 2;
+					top: 10%;
+					left: 60%;
+					font-size: 2vw;
+					padding-top: 1vw;
+				}
+				.addButton:hover{
+					background-color: white;
+					color: #1B86D1;
+				}
+				.sessionListHeader{
+					background-color: #2E3AFF;
+					height: 8%;
+					width: 65%;
+					position: fixed;
+					color: white;
+					padding: 1%;
+					top: 10%;
+					z-index: 1;
+
+				}
+				.sessionFilterHeader{
+					height: 16%;
+					width: 100%;
+					background: #2A67E8;
+					border-bottom: .2vw #2A67E8;
+				}
+
+				.sessionBookmarkHeader{
+					height: 16%;
+					width: 100%;
+					background: #2A67E8;
+				}
+				.tileBody{
+					background-color: white;
+					width: 65%;
+					margin-top: 9%;
+
+				}
+				.loginButton{
+					width: 10%;
+					height: 100%;
+					background-color: #3BADFF;
+					text-align: center;
+					padding-top: 1.3vw;
+					font-size: 1.3vw;
+				}
+				.loginButton:hover{
+					color: white;
+				}
+				.buffer{
+					width: 90%;
+				}
+				.headerContent{
+					width: 100%;
+					background-color: #3BADFF;
+					height: 10%;
+					position:fixed;
+					top: 0;
+					left: 1.1vw;
+					z-index: 1;
+				}
+				.sessionFilter{
+					width: 35%;
+					height: 50%;
+					background-color: #efefef;
+					position: fixed;
+					top: 10%;
+					left: 65%;
+
+				}
+				.sessionBookmarks{
+					width: 35%;
+					height: 50%;
+					background-color: #efefef;
+					position: fixed;
+					top: 50%;
+					left: 65%;
+				}
+				.sessionRow{
+					background-color: white;
+					color: #2d3d56;
+					border-bottom: .1vw solid white;
+					height: 16%;
+					margin-top: 2px;
+				}
+				.sessionHeader .backButton{
+					font-size: 1.5vw;
+					position: absolute;
+					right: 3vw;			
+					}
+				.sessionHeader{
+					background-color: #2A67E8;
+					height: 16%;
+					padding: 1vw;
+					color: white;
+					margin-top: -.2vw;
+					box-shadow:         1px 1px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+					padding-top: .6vw;
+				}
+				.sessionBody{
+					padding: 0vw;
+				}
+				.description{
+					width: 70%;
+					height: 100%;
+					padding: 1vw;
+				}
+				.members{
+					width: 30%;
+					height: 100%;
+				}
+				.member{
+					height: 12.5%;
+					width: 100%;
+				}
+				.memberTitle{
+					width: 100%;
+					height: 12.5%;
+					background-color: #2E3AFF;
+					box-shadow:         1px 1px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+					padding: 1vw;
+					color: white;
+				}
+				.memberAction{
+					width: 100%;
+					height: 8%;
+					background-color: #1B86D1;
+					padding-top: .5vw;
+					color: white;
+					text-align: center;
+				}
+				.memberProfilePicture
+				{
+					height: 100%;
+					width: 20%;
+				}
+				.sessionRow:hover{
+					-webkit-transition: all 200ms ease;
+					-moz-transition: all 200ms ease;
+					-ms-transition: all 200ms ease;
+					-o-transition: all 200ms ease;
+					transition: all 200ms ease;
+					-webkit-box-shadow: 1px 1px 1px 1px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+				  	-moz-box-shadow:    1px 1px 1px 1px #ccc;  /* Firefox 3.5 - 3.6 */
+				  	box-shadow:         1px 1px 1px 1px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+				}
+				.sessionBody{
+					height: 66%;
+				}
+				
+				.actionButton-blue{
+					width: 100%;
+					height: 2vw;
+					background-color: white;
+					color: #7592FF;
+					border: #7592FF;
+					border-radius: .2vw;
+					margin-bottom: .4vw;
+                    margin-top: .8vw;
+				}
+				.actionButton-blue:hover{
+					color: white;
+					background-color: #7592FF;
+					-webkit-transition: all 200ms ease;
+					-moz-transition: all 200ms ease;
+					-ms-transition: all 200ms ease;
+					-o-transition: all 200ms ease;
+					transition: all 200ms ease;
+				}
+				.actionButton-red{
+					width: 100%;
+					height: 2vw;
+					background-color: white;
+					color: #FA785D;
+					border: #FA785D;
+					border-radius: .2vw;			
+				}
+				.actionButton-red:hover{
+					background-color: #FA785D;
+					color: white;
+					-webkit-transition: all 200ms ease;
+					-moz-transition: all 200ms ease;
+					-ms-transition: all 200ms ease;
+					-o-transition: all 200ms ease;
+					transition: all 200ms ease;
+				}
+				.profilePictureSessionRow{
+					width: 100%;
+                    height: 100%;
+                    box-shadow: 1px 1px 1px #888888;
+				}
+				.headerButton{
+					width: 12%;
+					height: 100%;
+					color: white;
+					line-height: 100%;
+					padding-top: 1vw;
+					background-color: #1B86D1;
+				}
+				.headerButton:hover{
+					background-color: white;
+					color: #1B86D1;
+					border-bottom: .2vw blue;
+					-webkit-transition: background-color 100ms linear;
+    				-ms-transition: background-color 100ms linear;
+    				transition: background-color 100ms linear;
+
+				}
+				.filterThing{
+					width: 52%; 
+					font-size: 1.3vw; 
+					color: white; 
+					padding: 1vw; 
+					text-align: left; 
+				}
+				.sessionRowProfilePicture{
+					width: 10%; 
+					padding: 1%;
+				}
+				.sessionRowName{
+					width: 13%; 
+					padding: 2%;
+				}
+				.sessionRowInfo{
+					width: 72%; 
+					padding: 2%;
+				}
+				.sessionRowAction{
+					width: 5%; 
+					padding: 2%; 
+					margin-top: 0%;
+				}
+				.rowBlue{
+					background-color: #e5eefc;
+				}
+				.sessionFilterBody{
+					padding: 1vw;
+				}
+				.inputMarker{
+					width: 10%;
+					height: 2.9vw;
+					background-color: #2A67E8;
+					color: white;
+					border: #2A67E8;
+
+				}
+				input{
+					margin-top: 1vw;
+					width: 90%;
+					margin-left: -.1vw;
+					height: 2.9vw;
+				}
+				/* The Modal (background) */
+				.modal {
+				    display: none; /* Hidden by default */
+				    position: fixed; /* Stay in place */
+				    z-index: 3; /* Sit on top */
+				    left: 0;
+				    top: 0;
+				    width: 100%; /* Full width */
+				    height: 100%; /* Full height */
+				    overflow: auto; /* Enable scroll if needed */
+				    background-color: rgb(0,0,0); /* Fallback color */
+				    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+				}
+
+				/* Modal Content/Box */
+				.modal-content {
+				    background-color: #fefefe;
+				    margin: 2% auto; /* 15% from the top and centered */
+				    width: 50%; /* Could be more or less, depending on screen size */
+				    border-radius: 1%;
+
+				}
+
+				/* The Close Button */
+				.close {
+				    color: white;
+				    font-size: 1.2vw;
+				    font-weight: bold;
+				    width: 4%;
+				    margin-top: .2vw;
+				}
+				.title{
+					width: 96%;
+				}
+
+				.close:hover,
+				.close:focus {
+				    color: white;
+				    text-decoration: none;
+				    cursor: pointer;
+				}
+				.modalHeader{
+					background-color: #2A67E8;
+					color: white;
+					padding: 2%;
+					height: 7%;
+					overflow: hidden;
+					border-radius: 1%;
+					padding-left: -1%;
+				}
+				.modalBody{
+					padding: 1vw;
+				}
+				.submitSession{
+					height: 3.5vw; 
+					text-align: center;
+					width: 10vw;
+					background-color: #1B86D1;
+					border: none;
+					border-radius: 2%;
+					color: white;
+					font-size: 1.3vw;
+				}
+				.submitSession:hover{
+					color: #1B86D1;
+					background-color: white;
+					border: .1vw solid #1B86D1;
+					-webkit-transition: all 200ms ease;
+					-moz-transition: all 200ms ease;
+					-ms-transition: all 200ms ease;
+					-o-transition: all 200ms ease;
+					transition: all 200ms ease;
+				}
+				.sessionListReturn{
+					height: 3.5vw; 
+					text-align: center;
+					width: 10vw;
+					background-color: #1B86D1;
+					border: none;
+					border-radius: 2%;
+					color: white;
+					font-size: 1.3vw;
+				}
+				.sessionListReturn:hover{
+					color: #1B86D1;
+					background-color: white;
+					border: .1vw solid #1B86D1;
+					-webkit-transition: all 200ms ease;
+					-moz-transition: all 200ms ease;
+					-ms-transition: all 200ms ease;
+					-o-transition: all 200ms ease;
+					transition: all 200ms ease;
+				}
+				label{
+					margin-bottom: -1vw;
+				}
+				textarea{
+					margin-top: 1vw;
+				}

@@ -1,0 +1,156 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		{% load static %}
+		<link rel="stylesheet" href="{% static "css/sessionPage.css" %}">
+		{% load static %}
+		<script src="{% static "tableRough.js"%}"></script>
+	</head>
+
+	<body>
+		<div class="addButton text-center" id="myBtn">
+			<i class="fa fa-plus-circle"></i>
+		</div>
+		<div class="headerContent row ">
+			<div class="buffer"></div>
+			<div class="loginButton">Login <i class="fa fa-sign-in"></i></div>
+		</div>
+			<div class="sessionListHeader">
+				<div class="container-fluid" style="margin-left: 1vw;">
+					<div class="row">
+						<div style="width: 23%; ">
+							<span>Creator</span>
+						</div>
+						<div style="width: 57%; ">
+							<span> Info</span>
+						</div>
+						<div style="width: 20%; ">
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tileBody">
+				<div class="container-fluid sessions"
+								
+					</div>
+				</div>
+					</div>
+					<div class="sessionFilter">
+						<div class="sessionFilterHeader">
+							<div class="container">
+								<div class="row">
+									<div class="filterThing" class="pull-right">
+										Filter
+									</div>
+									<div class="headerButton text-center filterInstitution">
+										<i class="fa fa-institution" style="font-size: 2vw;"></i>
+									</div>
+									<div class="headerButton text-center filterDateTime">
+										<i class="fa fa-calendar" style="font-size: 2vw;"></i>
+									</div>
+									<div class="headerButton text-center filterUsers">
+										<i class="fa fa-users" style="font-size: 2vw;"></i>
+									</div>
+									<div class="headerButton text-center filterSearch">
+										<i class="fa fa-search" style="font-size: 2vw;"></i>
+									</div>
+									
+								</div>
+							</div>
+						<div>
+						<div class="sessionFilterBody">
+							 
+						</div>
+					</div>
+					<div class="sessionBookmarks">
+						<div class="sessionBookmarkHeader">
+							<div class="container">
+								<div class="row">
+									<div style="width: 52%; font-size: 1.3vw; color: white; padding: 1vw; text-align: left; ">
+										Updates
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modalHeader">
+    	<div class="container-fluid">
+    		<div class="row">
+	    		<div class="title" >
+	    			Create a New Session
+	    		</div>
+	    		<div class="close" >
+	    			
+	    		</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="modalBody">
+    	<div class="form-group">
+	    	<label for="title">Title</label>
+	    	<input class="form-control" id="title"></input>
+    	</div>
+    	<div class="container-fluid">
+		    <div class="row">
+			    <div class="form-group" style="width: 49%;">
+			    	<label for="school">School</label>
+			    	<select class="form-control schoolOptions" id="school">
+			    		<option>Hartnell College</option>
+			    		<option>California Polytechnic University </option>
+			    	</select>
+			    </div>
+			    <div class="form-group" style="margin-left: 2%; width: 40%;">
+			    	<label for="section">Section</label>
+			    	<select class="form-control sectionOptions" id="section">
+
+			    	</select>
+			    </div>
+			</div>
+		</div>
+	    <div class="form-group">
+	    	<label for="info">Description</label>
+	    	<textarea class="form-control" id="info" rows="8"></textarea>
+	    </div>
+	    <div class="container-fluid">
+		    <div class="row">
+			    <div class="form-group" style="width: 31%;">
+			    	<label for="date">Date</label>
+			    	<input type="date" class="form-control" id="date"></input>
+			    </div>
+			    <div class="form-group" style="margin-left: 2%; width: 25%;">
+			    	<label for="time">Time</label>
+			    	<input type="time" class="form-control" id="time"></input>
+			    </div>
+			    <div class="form-group" style="margin-left: 2%; width: 40%">
+			    	<label for="location">Location</label>
+			    	<input class="form-control" id="location"></input>
+			    </div>
+			</div>
+		</div>
+		<button class="submitSession pull-right">Submit <i class="fa fa-paper-plane"></i></button>
+		
+
+    </div>
+  </div>
+
+</div>
+	</footer>
+
+</html>

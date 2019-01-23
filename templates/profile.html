@@ -1,0 +1,340 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			body{
+				background-color: #f6e8ea;
+			}
+                        .card{
+                          -webkit-box-shadow: 0 8px 6px -6px black;
+                          -moz-box-shadow: 0 8px 6px -6px black;
+                          box-shadow: 0 8px 6px -6px black;
+                        }
+			
+			.mainContent{
+
+				margin-left: 0vw;
+				background-color: #EEAF48;
+				width: 100%;
+			}
+                        .navbar-brand img{
+                          max-height: 100%;
+                          max-width: 100%;
+                        }
+                        
+                        .logo{
+                                  width: 150px;
+                                  height: 30px;
+                          }
+
+		</style>
+                <style>
+                        .status-update{
+                          margin-top: 1vw;
+                          border: solid .5px #EEAF48;
+                        }
+                        .status-update .card-header{
+                                                    background-color: #5cb85c;
+                                                    color: white;
+                                                 }
+                        .profile-banner{
+                          width: 100%;
+                          height: 60%;
+                          bottom-border:  white;
+                          display: block;
+
+                        }
+                        .namePlusHandle{
+                          position: absolute;
+                          z-index 2;
+                          left: 24vw;
+                          top: 17vw;
+                        }
+                        .profile-picture{
+                          width: 19vw;
+                          height: 18vw;
+                          border-radius: 10%;
+                          position: absolute;
+                          z-index: 1;
+                          left: 4vw;
+                          top: 13vw;
+                          border: solid white;
+                          box-shadow: 3px 3px 1px #888888;
+                        }
+                        .filter{
+                          margin-top: 1vw;
+                          border: solid 1px #004444;
+                          
+                        }
+                        .sidebar{
+                            margin-top: 1vw;
+                            width: 90%;
+                            float: right;
+                            
+                        }
+                        .link-banner{
+                          width: 100%;
+                          border-radius: 0px;
+                          margin: 0px auto 0 auto;
+                          height: 4vw;
+                          background-color: #EEAF48;
+                          
+                          }
+                          
+                        .link-banner a{
+                          color: white;
+                          background: #EEAF48;
+                          height: 100%;
+                          font-size: 1.2vw;
+                          margin-left: .2vw;
+                          margin-right: .2vw;
+                          line-height: 3vw;
+
+                        }
+                        .link-banner a:hover{
+                          color: #EEAF48;
+                          background: white;
+                          -webkit-transition: all 500ms ease;
+                          -moz-transition: all 500ms ease;
+                          -ms-transition: all 500ms ease;
+                          -o-transition: all 500ms ease;
+                          transition: all 500ms ease;
+                        }
+                        .avatar-img{
+                                height: 13%;
+                                width: 90%;
+                                border-radius: 50%;
+                                border: 0px;
+                          box-shadow: 3px 3px 1px #888888;;
+                         }
+                         .feed-post{
+                            margin-top: 1vw;
+                            margin-bottom: 2vw;
+                            width: 100%;
+                            border: solid  .5px #5cb85c;
+                            -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
+                            
+                         }
+                         .feed-post p{
+                            margin-top: 1vw;
+                         }
+                         .feed-post-header{
+                            margin-bottom: 0vw;
+                            background-color: #5cb85c;
+                         }
+                         .feed-post-content{
+                          margin-top: 1vw;
+                         }
+                         .feed-post .card-footer .btn{
+                                border: none;
+                         }
+                         .post-image{
+                                max-width: 100%;
+                                max-height: 100%;
+                         }
+                         .post{
+                            background-color:  #004444;
+                         }
+                          .status-update .btn{
+                                                      margin-left: 1vw;
+                                                }
+                </style>
+
+		
+		
+	</head>
+	<nav class="navbar navbar-toggleable-md navbar-inverse sticky-top" style="background-color: 
+ #004444;  color: white;">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    		<span class="navbar-toggler-icon"></span>
+	  	</button>
+	  	<a class="navbar-brand" href="file:///home/egutierrez/djangoProjects/tutor/templates/dashboard.html">
+                                        <img src="Logomakr_4kprxh.png" class="logo">
+                                </a>
+
+	  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                                <form class="form-inline my-2 my-lg-0">
+                                                  <input class="form-control mr-sm-2" style="width: 500px;" type="text" placeholder="Search">
+                                                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+                                                </form>
+	    		<ul class="navbar-nav" style="margin-left:auto">
+	      			<li class="nav-item float-right" >
+	        				<a class="nav-link" href="#"> Sessions <span class="fa fa-calendar"></span></a>
+	      			</li>
+			      	<li class="nav-item float-right">
+			        		<a class="nav-link" href="#">Tutors <span class="fa fa-graduation-cap"></span></a>
+			      	</li>
+			      	<li class="nav-item float-right">
+			        		<a class="nav-link " href="#">Classes <span class="fa fa-university" aria-hidden="true"></span></a>
+			      	</li>
+			      	<li class="nav-item float-right">
+			      		<a class="nav-link" href="#">Resources <span class="fa fa-archive" aria-hidden="true"></span></a>
+			      	</li>
+	    		</ul>
+                                                	
+	  	</div> 
+	</nav>
+
+
+	<div class="container-fluid">
+
+                <div class="row">
+                          <img src="http://31.media.tumblr.com/bbf74709318b33f84c22e3adeacfa95b/tumblr_mv1ymfXla81rsefg8o6_1280.png" class="profile-banner">
+                </div>
+                <div class="row">
+                          <img src = "https://a3-images.myspacecdn.com/images03/1/240e42b5d9ce48a78983961e7fcb3c39/600x600.jpg" class="profile-picture">
+                </div>
+                <div class="namePlusHandle">
+                      <h1>Tom Myspace</h1>
+                      <h6>@MrMyspace</h6>
+                </div>
+                <div class="row">
+                  <div class="card link-banner" >
+                              <div>
+                                  <div class="row"  style="float: right; margin-right: 1vw;">
+                                      <a class="nav-link" href="#"> Causes <span class="fa fa-institution"></span></a>
+                                      <a class="nav-link" href="#"> Schedule <span class="fa fa-calendar"></span></a>
+                                      <a class="nav-link" href="#"> Groups <span class="fa fa-group"></span></a>
+                                      <a class="nav-link" href="#"> Bookmarks <span class="fa fa-pencil"></span></a>
+                                  </div>
+                              </div>
+                  </div>
+                </div>
+
+                <div class="main-content">
+                  <div class="row">
+                      <div class="col-md-3">
+                        <div class="card sidebar">
+                              <div class="card-block">
+                                    <h6><span class="fa fa-institution"></span> School</h6>
+                                    <p style="font-size: 1vw;">UC Berkeley Alumni</p>
+                                    <h6><span class="fa fa-briefcase"></span> Occupation</h6
+                                    <p style="font-size: 1vw">Founder of Myspace</p>
+                                    <h6><span class="fa fa-globe"></span> Website</h6>
+                                    <p style="font-size: 1vw;">http://www.myspace.com</p>
+                                    <h6><span class="fa fa-user"></span> About Me</h6>
+                                    <p style="font-size: 1vw;">I made the myspace I am also one cool guy I like a lot of things but mainly I like to go on Myspace and add everyone that joins the website because why the heck not you know homie this big mass of hydrogen is just going to burn out on us one day anyway might as well enjoy life while we still can.</p>
+
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-7">
+                          <div class="card status-update" style="background-color: white">
+                                <div class="card-header">Post to Tom's wall</div>
+                                        <div class="card-block">
+                                                <textarea placeholder="Share something with Tom" class="form-control status"></textarea>
+                                        </div>
+                                         <div class="card-footer">
+                                                <div class="row">
+                                                        <div class="col-md-10">
+                                                                <div class="row">
+                                                                        <button type="button" class="btn btn-outline-info borderless"><span class="fa fa-paperclip"></span</button>
+                                                                        <button type="button" class="btn btn-outline-info borderless"> <span class="fa fa-eye"></span></button>
+                                                                        <button type="button" class="btn btn-outline-info borderless"><span class="fa fa-smile-o"></span></button>
+                                                                </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                                <button type="button" class="btn btn-primary" style="background-color: #5cb85c;"><span class="fa fa-send"> Post</span></button>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                          <div class="card feed-post">
+                                        <div class="card-header post">
+                                        </div>
+                                        <div class="card-block">
+                                                       <div class="row">
+
+                                                                <div class="col-md-2">
+                                                                        <img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="img-thumbnail avatar-img">
+                                                                </div>
+                                                                <div class="col-md-8 ">
+                                                                      <h5 ><b>Tom Myspace</b></h5>
+                                                                                 <span style="font-size: 1vw; color: gray;">Data Structures and Algorithms <span class="fa fa-eye"></span> </span>
+                                                                                 <br><i style="font-size: .8vw; color: gray;">Posted 37 minutes ago</i><span class="fa fa-time"></span>
+                                                                </div>
+                                                                
+                                                                <div class="row">
+                                                                        <div class="col-md-2 ">
+
+                                                                        </div>
+                                                                        <div class="col-md-9">
+                                                                                <p>
+                                                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim metus ac dolor feugiat condimentum. Duis porta lorem at nulla pretium luctus. Curabitur maximus eros ut magna varius, nec feugiat ex ullamcorper. Aliquam ornare sed enim sit amet rhoncus. 
+                                                                                </p>
+                                                                        </div>
+                                                                        <div class="col-md-1">
+                                                                        </div>
+                                                                </div>
+
+                                                        </div>
+                                                </div>
+                                         <div class="card-footer">
+                                                <div class="row">
+                                                        <div class="col-md-6 row">
+                                                                <button type="button" class="btn btn-outline-warning"><span class="fa fa-star"> 17</span></button>
+                                                                <button type="button" class="btn btn-outline-primary"><span class="fa fa-comments"> 3</span></button>
+                                                                <button type="button" class="btn btn-outline-success"><span class="fa fa-share"> 0</span></button>
+                                                                <button type="button" class="btn btn-outline-danger"><span class="fa fa-bookmark"> 1</span></button>
+                                                         </div>
+                                                </div>
+                                        </div>
+                            </div>
+                            <div class="card feed-post">
+                                        <div class="card-header post">
+                                        </div>
+                                        <div class="card-block">
+                                                       <div class="row  feed-post-header">
+                                                                <div class="col-md-2">
+                                                                        <img src="http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="img-thumbnail avatar-img">
+                                                                </div>
+                                                                <div class="col-md-8 ">
+                                                                      <h5 ><b>Tom Myspace</b></h5>
+                                                                                 <span style="font-size: 1vw; color: gray;">Public <span class="fa fa-eye"></span> </span>
+                                                                                 <br><i style="font-size: .8vw; color: gray;">Posted 37 minutes ago</i><span class="fa fa-time"></span>
+                                                                </div>
+                                                                
+                                                         <div class="row feed-post-content">
+                                                                      <div class="col-md-2">
+
+                                                                        </div>
+                                                                        <div class="col-md-9 ">
+                                                                                <img src="https://images5.alphacoders.com/414/414113.jpg" class="post-image" align="middle">
+                                                                                <p>
+                                                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim metus ac dolor feugiat condimentum. Duis porta lorem at nulla pretium luctus. Curabitur maximus eros ut magna varius, nec feugiat ex ullamcorper. Aliquam ornare sed enim sit amet rhoncus. 
+                                                                                </p>
+                                                                        </div>
+                                                                        <div class="col-md-1">
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                         <div class="card-footer">
+                                                <div class="row">
+                                                        <div class="col-md-6 row">
+                                                                <button type="button" class="btn btn-outline-warning"><span class="fa fa-star"> 17</span></button>
+                                                                <button type="button" class="btn btn-outline-primary"><span class="fa fa-comments"> 3</span></button>
+                                                                <button type="button" class="btn btn-outline-success"><span class="fa fa-share"> 0</span></button>
+                                                                <button type="button" class="btn btn-outline-danger"><span class="fa fa-bookmark"> 1</span></button>
+                                                         </div>
+                                                </div>
+                                        </div>
+                            </div>
+                </div>
+                          
+
+                      <div class="col-md-2">
+                          
+                      </div>
+                  </div>
+
+                </div>
+        </div>

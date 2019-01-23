@@ -1,0 +1,229 @@
+<!DOCTYPE>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<style>
+			body{
+				background-color: #008080;
+			}
+	                        .card{
+	                          -webkit-box-shadow: 0 8px 6px -6px black;
+	                          -moz-box-shadow: 0 8px 6px -6px black;
+	                          box-shadow: 0 8px 6px -6px black;
+	                        }
+	                        .card-header{
+	                        	background-color: #004444;
+	                        	color: white;
+	                        }
+			
+			.mainContent{
+
+				margin-left: 0vw;
+				background-color: #008080;
+				width: 100%;
+			}
+                        .navbar-brand img{
+                          max-height: 100%;
+                          max-width: 100%;
+                        }
+                        
+                        .logo{
+                                  width: 150px;
+                                  height: 30px;
+                          }
+
+		</style>
+		<style>
+			.tutorFilter{
+				top: 4vw;
+				left: 72vw;
+				background-color: #f2f2f2;
+				height: 20vw;
+				width: 25%;
+				margin-top: 1vw;
+				position: fixed;
+				border: #008080;
+			}
+			.tutorFilter .filter{
+				margin-bottom: 1vw;
+			}
+			.searchFilter{
+				margin-bottom: 1vw;
+			}
+			.tutorCard{
+				width: 31%;
+				height: 45%;
+				margin-right: 1vw;
+				border: #008080;
+				-webkit-box-shadow: 0 8px 6px -6px black;
+		                                -moz-box-shadow: 0 8px 6px -6px black;
+		                                box-shadow: 0 8px 6px -6px black;
+			}
+			.tutorCard .card-block{
+				background-color: #f2f2f2;
+			}
+			.profile-banner{
+		                          width: 100%;
+		                          height: 35%;
+		                          bottom-border:  white;
+		                          display: block;
+		                 }
+		                 .tutorCard .profile-picture{
+		                          width: 8vw;
+		                          height: 7.5vw;
+		                          border-radius: 50%;
+		                          position: relative;
+		                          z-index: 1;
+		                          bottom: 8vw;
+		                          left: 1vw;
+		                          border: solid white;
+		                 }
+		                 .tutorCard .name{
+		                 	position: relative;
+		                 	bottom: 6.5vw;
+		                 	font-size: 1.7vw;
+		                 }
+		                 .subtitle{
+		                 	font-size: .8vw;
+		                 	color: gray;
+		                 }
+		                 .school{
+		                 	position: relative;
+		                 	bottom: 6.2vw;
+		                 }
+		                 .subjects{
+		                 	position: relative;
+		                 	bottom: 6.2vw;
+		                 }
+		                 .bar{
+		                 	background-color:  #eaeae1;
+		                 	width: 100%;
+		                 	box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+		                 	font-size: 1.2vw;
+
+		                 }
+		                 .bar div{
+		                 	margin: 0 auto;
+		                 	margin-top: .1vw;
+		                 }
+		                 .sessionCard-mini{
+		              		margin: 0 auto;
+		              		width: 60%;
+		              		padding: .5vw;
+		              		font-size: .8vw;
+
+		                 }
+		                 .sessionCard-mini:hover{
+
+		                 }
+
+
+		</style>
+	</head>
+	<body>
+		<nav class="navbar navbar-toggleable-md navbar-inverse sticky-top" style="background-color: #004444;  color: white;">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    		<span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<a class="navbar-brand" href="#">
+	                                        <img src="Logomakr_4kprxh.png" class="logo">
+	                                </a>
+
+		  	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	                                                <form class="form-inline my-2 my-lg-0">
+	                                                  <input class="form-control mr-sm-2" style="width: 500px;" type="text" placeholder="Search">
+	                                                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+	                                                </form>
+		    		<ul class="navbar-nav" style="margin-left:auto">
+		      			<li class="nav-item float-right" >
+		        				<a class="nav-link" href="#"> Sessions <span class="fa fa-calendar"></span></a>
+		      			</li>
+				      	<li class="nav-item float-right">
+				        		<a class="nav-link" href="#">Tutors <span class="fa fa-graduation-cap"></span></a>
+				      	</li>
+				      	<li class="nav-item float-right">
+				        		<a class="nav-link " href="#">Classes <span class="fa fa-university" aria-hidden="true"></span></a>
+				      	</li>
+				      	<li class="nav-item float-right">
+				      		<a class="nav-link" href="#">Resources <span class="fa fa-archive" aria-hidden="true"></span></a>
+				      	</li>
+		    		</ul>	
+		  	</div> 
+		</nav>
+		<div class="container-fluid">
+			<div class="row">
+				<div style="width: 75%;">
+					<div class="row " style="margin: 1vw;">
+						<div class="card tutorCard" >
+							<div>
+								<img src="http://31.media.tumblr.com/bbf74709318b33f84c22e3adeacfa95b/tumblr_mv1ymfXla81rsefg8o6_1280.png" class="profile-banner">
+							</div>
+							
+							<div class="container" style="text-align: center;">
+								<h3 >Tom Myspace</h3>
+								<span style="font-size: .8vw;"><span class="fa fa-institution"></span> Hartnell College</span><br>
+								<span style="font-size: .8vw; margin-top: 1vw;"><span class="fa fa-book"></span> Mathematics, Physics, Comp. Sci</span>
+							</div>
+							<div class="sessionCard-mini">
+								<div class="row">
+									<div style="width: 20%">
+										<span class="fa fa-rocket" style="color: #6666ff; margin-left: 1vw; margin-top: .3vw;"></span>
+									</div>
+									<div style="width: 50%;">Apr 17. 12:30 PM</div>
+									<div style="width: 30%">Physics</div>
+								</div>
+							</div>
+							<div class="sessionCard-mini" style="margin-top: -1vw;">
+								<div class="row">
+									<div style="width: 20%">
+										<span class="fa fa-calculator" style="color: #ff944d; margin-left: 1vw; margin-top: .3vw;"></span>
+									</div>
+									<div style="width: 50%;">Apr 18. 1:30 PM</div>
+									<div style="width: 30%">Math</div>
+								</div>
+							</div>
+							<div>
+								<div class="row">
+								</div>
+							</div>
+
+						</div>
+						<div class="card tutorCard">
+							<img src="https://www.walldevil.com/wallpapers/a15/wallpapers-blue-sea-computer-wallpaper-surface-original-sinego-morya-gdefon-smooth.jpg" class="profile-banner">
+							<img src = "http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="profile-picture">
+						</div>
+						<div class="card tutorCard">
+							<img src="http://www.planwallpaper.com/static/images/b807c2282ab0a491bd5c5c1051c6d312_rP0kQjJ.jpg" class="profile-banner">
+							<img src = "http://scontent.cdninstagram.com/t51.2885-15/e35/15043711_1720607121599396_8253787907131703296_n.jpg?ig_cache_key=MTM3OTg3MzM5ODgxNzI0NDk0MA%3D%3D.2" class="profile-picture">
+
+						</div>
+					</div>
+					
+					
+				</div>
+				<div style="width: 25%;">
+					<div class="card tutorFilter">
+						<div class="card-header">Filter</div>
+						<div class="card-block">
+							<div class="input-group searchFilter">
+							      <input type="text" class="form-control" placeholder="Search for...">
+							      <span class="input-group-btn">
+							        <button class="btn btn-secondary" type="button"><span class="fa fa-search"></span></button>
+							      </span>
+							 </div>
+							<div id="tutorFilter" class="filter"><span class="fa fa-user"> Tom Myspace</span></div>
+							<div id="schoolFilter" class="filter"><span class="fa fa-institution"> Hartnell College</span></div>
+							<div id="classFilter" class="filter"><span class="fa fa-pencil"> Differential Equations</span></div>
+							<div id="subjectFilter" class="filter"><span class="fa fa-book"> Mathematics</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
